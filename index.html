@@ -12,29 +12,30 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css" charset="utf-8">
   <link rel="stylesheet" href="svg.css" charset="utf-8">
-  <link rel="stylesheet" href="animate.css">
-  <link rel="stylesheet" href="media.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js">
-  </script>
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
 </head>
-
 <body>
     <header class="header-container">
       <div class="logo-container">
         <img src="assets/balliumlogo.svg" alt="Ballium">
       </div>
       <nav>
-        <a href="#">works</a>
-        <a href="#">us</a>
-        <a href="#">news</a>
-        <a href="#">contact</a>
-        <div class="social-media">
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
-          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a class="navigation" href="#">works</a>
+        <a class="navigation" href="#">us</a>
+        <a class="navigation" href="#">news</a>
+        <div class="sub-menu">
+        <a class="navigation" href="#" id="contact">contact</a>
+        <div class="outer-border">
+        <div id="social-media">
+          <a href="#"><img src="social/whatsapp-brands.svg"></img></a>
+          <a href="#"><img src="social/instagram-brands.svg"></img></a>
+          <a href="#"><img src="social/facebook-square-brands.svg"></img></a>
+          <a href="#"><img src="social/google-plus-g-brands.svg"></img></a>
         </div>
+      </div>
+      </div>
       </nav>
     </header>
     <section>
@@ -43,4 +44,13 @@
   Your borowser Does not support SVG <!-- fallback image in CSS -->
 </object>
 </section>
+<script>
+$("document").ready(function(){
+  $("#contact").click(function(){
+  $(".outer-border").toggle("blind",400);
+  $("div#social-media").toggle("blind",400);
+    });
+});
+</script>
 </body>
+</html>
