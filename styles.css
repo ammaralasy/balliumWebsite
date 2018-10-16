@@ -4,6 +4,12 @@
   font-weight: 200;
   font-style: normal;
 }
+@font-face {
+  font-family: 'avantgardebkbt';
+  src: url(fonts/AvantGardeBookBT.ttf);
+  font-weight: 200;
+  font-style: normal;
+}
 
 @media screen and (max-width: 800px) {
   nav, .logo-container {
@@ -27,22 +33,27 @@
 
 body {
   width: 100%;
-  max-height: 100%;
+  height: 100%;
 }
-
+html {
+  width: 100%;
+  height: 100%;
+}
 nav, .logo-container, .header-container {
   display: flex;
 }
 
 nav {
-  width: 60%;
+  width: 70%;
   justify-content: flex-start;
   align-items: flex-end;
 
 }
-
+nav > a:first-of-type {
+margin-left: 0;
+}
 .navigation {
-  margin-left: 25px;
+  margin-left: 60px;
   margin-bottom: 20px;
   font-size: 1.2em;
   cursor: pointer;
@@ -65,7 +76,7 @@ nav {
   border-bottom: 2px solid white;
   position: absolute;
   top: 8px;
-  left: 0.15px;
+  left: 0;
   z-index: 5;
 }
 .outer-border {
@@ -74,7 +85,7 @@ position: absolute;
   padding: 100px 30px;
   border: 2px solid  #51baac;
   top: -10px;
-  left: 30px;
+  left: 65px;
 }
 #social-media img {
   width: 25px;
@@ -87,13 +98,14 @@ position: absolute;
   position: absolute;
   bottom: 0;
 }
-.navigation, section p {
+
+.navigation, .main-bg p {
   font-family: 'avantgarde';
   color: #51baac;
   text-transform: capitalize;
 }
 
-section p {
+.main-bg p {
   position: absolute;
   font-size: 1.8em;
   top: 40%;
@@ -105,8 +117,9 @@ section p {
 }
 
 .logo-container {
-  width: 40%;
-  justify-content: flex-end;
+  width: 30%;
+  justify-content: center;
+  margin-left: 11%;
 }
 
 .logo-container img {
@@ -114,9 +127,35 @@ section p {
   height: 100%;
 }
 
-.background {
-  width: 100vw;
-  height: 100vh;
+.background1 , .background2 , .background3 {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
+  z-index: -2;
+}
+article {
+position: absolute;
+top: 900px;
+left: 100px;
+width: 50%;
+}
+article h1 {
+  font-family: 'avantgardebkbt';
+  font-size: 3em;
+  color: #51baac;
+}
+article h1 span {
+  font-family: 'avantgardebkbt';
+  font-size: 3rem;
+  color: #51baac;
+  text-transform: capitalize;
+}
+article p {
+  font-family: 'avantgardebkbt';
+  font-size: 1.6rem;
+  color: #51baac;
+  line-height: 3rem;
+  text-align: justify;
+  width: 85%;
 }

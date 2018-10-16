@@ -12,10 +12,12 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css" charset="utf-8">
   <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
-<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
-<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
 </head>
+
 <body>
+  <div id="page1">
     <header class="header-container">
       <div class="logo-container">
         <img src="assets/balliumlogo.svg" alt="Ballium">
@@ -25,37 +27,59 @@
         <a class="navigation" href="#">us</a>
         <a class="navigation" href="#">news</a>
         <div class="sub-menu">
-        <a class="navigation" href="#" id="contact">contact</a>
-        <div class="outer-border">
-        <div id="social-media">
-          <a href="#"><img src="social/whatsapp-brands.svg"></img></a>
-          <a href="#"><img src="social/instagram-brands.svg"></img></a>
-          <a href="#"><img src="social/facebook-square-brands.svg"></img></a>
-          <a href="#"><img src="social/google-plus-g-brands.svg"></img></a>
+          <a class="navigation" href="#" id="contact">contact</a>
+          <div class="outer-border">
+            <div id="social-media">
+              <a href="#"><img src="social/whatsapp-brands.svg"></img></a>
+              <a href="#"><img src="social/instagram-brands.svg"></img></a>
+              <a href="#"><img src="social/facebook-square-brands.svg"></img></a>
+              <a href="#"><img src="social/google-plus-g-brands.svg"></img></a>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
       </nav>
     </header>
-    <section>
-    <p>we fly to sky..</p>
-    <object type="image/svg+xml" data="assets/main-bg.svg" class="background">
-  Your borowser Does not support SVG <!-- fallback image in CSS -->
-</object>
-<object type="image/svg+xml" data="assets/main-elements.svg" class="background">
-Your borowser Does not support SVG <!-- fallback image in CSS -->
-</object>
-<object type="image/svg+xml" data="assets/sun.svg" class="background">
-Your borowser Does not support SVG <!-- fallback image in CSS -->
-</object>
-</section>
-<script>
-$("document").ready(function(){
-  $("#contact").click(function(){
-  $(".outer-border").toggle("blind",400);
-  $("div#social-media").toggle("blind",400);
+
+    <div class="main-bg">
+      <p>we fly to sky..</p>
+      <object type="image/svg+xml" data="assets/main-bg.svg" class="background1">Your borowser Does not support SVG</object>
+      <object type="image/svg+xml" data="assets/main-elements.svg" class="background2">Your borowser Does not support SVG</object>
+      <object type="image/svg+xml" data="assets/sun.svg" class="background3">Your borowser Does not support SVG</object>
+    </div>
+
+  </div>
+
+  <article id="page2">
+    <h1><span>what</span> is <span>ballium</span>?</h1>
+    <p>A good company utilizes pictures and text to help
+capture the attention of its audience. Graphic
+design is a combination of visual images and text to
+communicate to an audience. ... Graphic design is
+used on materials including packaging, brochures,
+and websites...</p>
+<p>A good company utilizes pictures and text to help
+capture the attention of its audience. Graphic
+design is a combination of visual images and text to
+communicate to an audience. ... Graphic design is
+used on materials including packaging, brochures,
+and websites...</p>
+  </article>
+
+
+  <script>
+    $(document).ready(function() {
+      $("#contact").click(function(e) {
+      $(".outer-border").toggle("blind", 400);
+      $("div#social-media").toggle("blind", 400);
+      });
     });
-});
-</script>
+    $(document).on("click",function(event){
+      if(!$("#contact").is(event.target) && $("#contact").has(event.target).length === 0){
+    $(".outer-border").hide("blind", 400);
+    $("div#social-media").hide("blind", 400);
+    }
+    });
+  </script>
 </body>
+
 </html>
