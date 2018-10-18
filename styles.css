@@ -75,21 +75,21 @@ margin-left: 0;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   position: absolute;
-  top: 8px;
+  top: 5px;
   left: 0;
   z-index: 5;
 }
 .outer-border {
   display: none;
 position: absolute;
-  padding: 100px 30px;
+  padding: 105px 30px;
   border: 2px solid  #51baac;
   top: -15px;
   left: 65px;
 }
 #social-media img {
   width: 25px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 #social-media a:last-of-type img {
   width: 33px;
