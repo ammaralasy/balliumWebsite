@@ -136,26 +136,28 @@ position: absolute;
 }
 article {
 position: absolute;
-top: 900px;
+top: 850px;
 left: 100px;
 width: 50%;
+height: 100%;
 }
 article h1 {
   font-family: 'avantgardebkbt';
-  font-size: 3em;
+  font-size: calc(30px + 1vw);
   color: #51baac;
 }
 article h1 span {
   font-family: 'avantgardebkbt';
-  font-size: 3rem;
+  font-size: calc(30px + 1vw);
   color: #51baac;
   text-transform: capitalize;
 }
 article p {
   font-family: 'avantgardebkbt';
-  font-size: 1.6rem;
+  font-size: calc(17px + 0.6vw);
   color: #51baac;
-  line-height: 3rem;
+  line-height: 1.5em;
+  word-spacing: normal;
   text-align: justify;
   width: 85%;
 }
