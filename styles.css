@@ -135,29 +135,71 @@ position: absolute;
   z-index: -2;
 }
 article {
+display: flex;
+justify-content: space-between;
 position: absolute;
 top: 850px;
-left: 100px;
-width: 50%;
+width: 100%;
 height: 100%;
+}
+.intro-container {
+  width: 50%;
 }
 article h1 {
   font-family: 'avantgardebkbt';
   font-size: calc(30px + 1vw);
   color: #51baac;
+  margin-left: 50px;
 }
 article h1 span {
   font-family: 'avantgardebkbt';
   font-size: calc(30px + 1vw);
   color: #51baac;
   text-transform: capitalize;
+
 }
 article p {
   font-family: 'avantgardebkbt';
-  font-size: calc(17px + 0.6vw);
+  font-size: calc(15px + 0.6vw);
   color: #51baac;
   line-height: 1.5em;
   word-spacing: normal;
   text-align: justify;
-  width: 85%;
+  width: 75%;
+  margin-left: 50px;
+}
+.carousel-container {
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.first-carousel img , .second-carousel img {
+  width: 400px;
+  height: 250px;
+}
+.first-carousel img{
+  margin: auto;
+  border: 2px solid white;
+}
+.first-carousel{
+  border: 5px solid #f4df61;
+  width: 412px;
+  height: 260px;
+  margin-left: 100px;
+}
+.second-carousel img{
+  margin: auto;
+  border: 2px solid white;
+}
+.second-carousel{
+  border: 5px solid #51baac;
+  width: 412px;
+  height: 260px;
+}
+#down {
+  position: relative;
+  left: 430px;
+}
+#down:hover , #up:hover {
+  cursor: pointer;
 }
