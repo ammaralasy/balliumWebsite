@@ -33,7 +33,7 @@
 
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 html {
   width: 100%;
@@ -114,6 +114,7 @@ position: absolute;
 
 .header-container {
   width: 100%;
+  padding-bottom: 25%;
 }
 
 .logo-container {
@@ -137,15 +138,15 @@ position: absolute;
 article {
 display: flex;
 flex-flow: row wrap;
-justify-content: space-around;
-position: absolute;
-top: 120%;
+position: relative;
+top: 8%;
 width: 100%;
 height: 100%;
 
 }
 .intro-container {
-  width: calc(25% + 10vw);
+  width: calc(30% + 5vw);
+  height: 52vw;
   margin-left: auto;
 }
 article h1 {
@@ -167,41 +168,65 @@ article p {
   color: #51baac;
   line-height: 1.7;
   text-align: justify;
-  hyphens: auto;
   word-spacing: 0;
   width: 90%;
 }
 .carousel-container {
-  width: calc(23% + 10vw);
-  margin-top: 50px;
+  width: calc(30% + 5vw);
+  height: 50vw;
+  margin-top: 40px;
   margin-right: auto;
 }
 .first-carousel img , .second-carousel img {
   width: 99.5%;
-  height: calc(133px + 9.5vw);
-}
-.first-carousel img{
+  height: 19vw;
+  /*height: calc(133px + 9.5vw);*/
   border: 2px solid white;
+  margin-left: 1px;
 }
+
 .first-carousel{
   border: 5px solid #f4df61;
-  width: calc(250px + 25%);
-  height: calc(140px + 10vw);
+  width: calc(75% + 5vw);
+  height: 20vw;
+  /*height: calc(18% + 10vw);*/
+  /*width: calc(250px + 25%);*/
+  /*height: calc(140px + 10vw);*/
   margin-left: 50px;
 }
-.second-carousel img{
-  margin: auto;
-  border: 2px solid white;
-}
-.second-carousel{
+.second-carousel {
   border: 5px solid #51baac;
-  width: calc(250px + 25%);
-  height: calc(140px + 10vw);
+  width: calc(75% + 5vw);
+  height: 20vw;
+  /*height: calc(18% + 10vw);*/
+  /*width: calc(250px + 25%);*/
+  /*height: calc(140px + 10vw);*/
 }
 #down {
   position: relative;
-  left: calc(280px + 5vw);
+  left: calc(69% + 5vw);
 }
 #down:hover , #up:hover {
   cursor: pointer;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+footer .main-img {
+display: block;
+  width: 100%;
+  height: 40vw;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -5;
+}
+footer .white-logo {
+  width: 20%;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
 }
