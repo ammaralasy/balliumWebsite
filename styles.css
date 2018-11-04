@@ -135,34 +135,36 @@ position: absolute;
   top: 0;
   z-index: -2;
 }
-article {
+#page2 {
 display: flex;
 flex-flow: row wrap;
 position: relative;
 top: 8%;
 width: 100%;
 height: 100%;
+overflow: hidden;
 
 }
-.intro-container {
+#intro-container {
+  position: relative;
   width: calc(30% + 5vw);
   height: 52vw;
   margin-left: auto;
 }
-article h1 {
+#page2 h1 {
   font-family: 'avantgardebkbt';
   font-size: calc(25px + 1vw);
   color: #51baac;
   /*margin-left: 50px;*/
 }
-article h1 span {
+#page2 h1 span {
   font-family: 'avantgardebkbt';
   font-size: calc(25px + 1vw);
   color: #51baac;
   text-transform: capitalize;
 
 }
-article p {
+#page2 p {
   font-family: 'avantgardebkbt';
   font-size: calc(17px + 0.4vw);
   color: #51baac;
@@ -171,11 +173,12 @@ article p {
   word-spacing: 0;
   width: 90%;
 }
-.carousel-container {
+#carousel-container {
   width: calc(30% + 5vw);
   height: 50vw;
   margin-top: 40px;
   margin-right: auto;
+  position: relative;
 }
 .first-carousel img , .second-carousel img {
   width: 99.5%;
@@ -210,6 +213,7 @@ article p {
   cursor: pointer;
 }
 footer {
+  display: block;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -218,7 +222,7 @@ footer {
 footer .main-img {
 display: block;
   width: 100%;
-  height: 40vw;
+  height: 45vw;
   position: absolute;
   bottom: 0;
   overflow: hidden;

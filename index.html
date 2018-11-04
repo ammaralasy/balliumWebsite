@@ -13,6 +13,30 @@
   <link rel="stylesheet" href="styles.css" charset="utf-8">
   <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <style>
+  @keyframes slidetoleft {
+    from {transform: translateX(200%);}
+    to {transform: translateX(0);}
+  }
+  .slide-right {
+    animation-name: slidetoleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes slidetoright {
+    from {transform: translateX(-200%);}
+    to {transform: translateX(0);}
+  }
+  .slide-left {
+    animation-name: slidetoright;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .none {
+    display: none;
+  }
+
+  </style>
 </head>
 
 <body>
@@ -49,7 +73,7 @@
   </div>
 
   <article id="page2" class="snap">
-    <div class="intro-container">
+    <div id="intro-container" class="slide-right">
     <h1><span>what</span> is <span>ballium</span>?</h1>
     <p>A good company utilizes pictures and text to help
 capture the attention of its audience. Graphic
@@ -64,7 +88,7 @@ communicate to an audience. ... Graphic design is
 used on materials including packaging, brochures,
 and websites...</p>
 </div>
-  <div class="carousel-container">
+  <div id="carousel-container" class="slide-right">
     <div class="first-carousel">
       <div><img src="carousel/img1.jpg"></div>
       <div><img src="carousel/img2.jpg"></div>
@@ -79,7 +103,7 @@ and websites...</p>
     </div>
    </div>
   </article>
-<footer class="snap">
+<footer id="page3" class="snap">
   <img class="white-logo" src="assets/white-logo.png">
   <img class="main-img" src="assets/footer3.png">
 
@@ -97,6 +121,22 @@ and websites...</p>
       $("#contact").click(function(e) {
       $(".outer-border").toggle("blind", 400);
       $("div#social-media").toggle("blind", 400);
+      });
+
+      $(function() {
+      $.scrollify({
+        section : ".snap",
+        before: function(i){
+          if(i === 1) {
+          $("#intro-container").addClass("slide-left");
+           $("#carousel-container").addClass("slide-right");
+          }
+          if(i !== 1){
+            $("#intro-container").removeClass("slide-left");
+            $("#carousel-container").removeClass("slide-right");
+          }
+        }
+      });
       });
 
       $(".first-carousel").slick({
@@ -141,11 +181,7 @@ and websites...</p>
       });
     } // End if
   });
-  $(function() {
-  $.scrollify({
-    section : ".snap",
-  });
-});
+
 
 $('article p').hyphenate('en-us');
 });
@@ -156,6 +192,13 @@ $('article p').hyphenate('en-us');
     $("div#social-media").hide("blind", 400);
     }
     });
+//   window.onload = function(){
+//    window.setTimeout(function(){
+//       document.getElementById('carousel-container').style.display = 'inline-block';
+//       document.getElementById('intro-container').style.display = 'inline-block';
+//   }, 1500);
+//   };
+
 
   </script>
 </body>
