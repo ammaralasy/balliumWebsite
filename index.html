@@ -20,8 +20,8 @@
   }
   .slide-right {
     animation-name: slidetoleft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
   }
   @keyframes slidetoright {
     from {transform: translateX(-200%);}
@@ -29,8 +29,8 @@
   }
   .slide-left {
     animation-name: slidetoright;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
   }
   .none {
     display: none;
@@ -73,7 +73,7 @@
   </div>
 
   <article id="page2" class="snap">
-    <div id="intro-container" class="slide-right">
+    <div id="intro-container">
     <h1><span>what</span> is <span>ballium</span>?</h1>
     <p>A good company utilizes pictures and text to help
 capture the attention of its audience. Graphic
@@ -88,7 +88,7 @@ communicate to an audience. ... Graphic design is
 used on materials including packaging, brochures,
 and websites...</p>
 </div>
-  <div id="carousel-container" class="slide-right">
+  <div id="carousel-container">
     <div class="first-carousel">
       <div><img src="carousel/img1.jpg"></div>
       <div><img src="carousel/img2.jpg"></div>
@@ -104,8 +104,8 @@ and websites...</p>
    </div>
   </article>
 <footer id="page3" class="snap">
-  <img class="white-logo" src="assets/white-logo.png">
-  <img class="main-img" src="assets/footer3.png">
+  <img id="white-logo" src="assets/white-logo.png">
+  <img id="main-img" src="assets/footer3.png">
 
 </footer>
 
@@ -130,10 +130,14 @@ and websites...</p>
           if(i === 1) {
           $("#intro-container").addClass("slide-left");
            $("#carousel-container").addClass("slide-right");
+           $(".first-carousel").slick('slickPlay');
+           $(".second-carousel").slick('slickPlay');
           }
           if(i !== 1){
             $("#intro-container").removeClass("slide-left");
             $("#carousel-container").removeClass("slide-right");
+            $(".first-carousel").slick('slickPause');
+            $(".second-carousel").slick('slickPause');
           }
         }
       });
@@ -192,12 +196,14 @@ $('article p').hyphenate('en-us');
     $("div#social-media").hide("blind", 400);
     }
     });
-//   window.onload = function(){
-//    window.setTimeout(function(){
-//       document.getElementById('carousel-container').style.display = 'inline-block';
-//       document.getElementById('intro-container').style.display = 'inline-block';
-//   }, 1500);
-//   };
+   window.onload = function(){
+  window.setTimeout(function(){
+      document.getElementById('carousel-container').style.display = 'inline-block';
+      document.getElementById('intro-container').style.display = 'inline-block';
+      document.getElementById('white-logo').style.display = 'inline-block';
+      document.getElementById('main-img').style.display = 'inline-block';
+  }, 1000);
+  };
 
 
   </script>
