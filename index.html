@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <style>
   @keyframes slidetoleft {
-    from {transform: translateX(200%);}
+    from {transform: translateX(150%);}
     to {transform: translateX(0);}
   }
   .slide-right {
@@ -24,7 +24,7 @@
     animation-timing-function: ease-out;
   }
   @keyframes slidetoright {
-    from {transform: translateX(-200%);}
+    from {transform: translateX(-150%);}
     to {transform: translateX(0);}
   }
   .slide-left {
@@ -196,14 +196,17 @@ $('article p').hyphenate('en-us');
     $("div#social-media").hide("blind", 400);
     }
     });
-   window.onload = function(){
-  window.setTimeout(function(){
-      document.getElementById('carousel-container').style.display = 'inline-block';
-      document.getElementById('intro-container').style.display = 'inline-block';
-      document.getElementById('white-logo').style.display = 'inline-block';
-      document.getElementById('main-img').style.display = 'inline-block';
-  }, 1000);
-  };
+  // window.onload = function(){
+  //  window.setTimeout(function(){
+  //   document.getElementById('carousel-container').style.display = 'inline-block';
+  //    document.getElementById('intro-container').style.display = 'inline-block';
+  //    document.getElementById('white-logo').style.display = 'inline-block';
+    //  document.getElementById('main-img').style.display = 'inline-block';
+//  }, 1000);
+//  window.setTimeout(function(){
+  //    document.getElementById('carousel-container').style.display = 'inline-block';
+//  }, 500);
+  //};
 
 
   </script>
