@@ -146,6 +146,7 @@ overflow: hidden;
 
 }
 #intro-container {
+  display: none;
   position: relative;
   width: calc(30% + 5vw);
   height: 52vw;
@@ -174,13 +175,14 @@ overflow: hidden;
   width: 90%;
 }
 #carousel-container {
+  display: none;
   width: calc(30% + 5vw);
   height: 50vw;
   margin-top: 40px;
   margin-right: auto;
   position: relative;
 }
-.first-carousel img , .second-carousel img {
+#first-carousel img , #second-carousel img {
   width: 99.5%;
   height: 19vw;
   /*height: calc(133px + 9.5vw);*/
@@ -188,7 +190,7 @@ overflow: hidden;
   margin-left: 1px;
 }
 
-.first-carousel{
+#first-carousel{
   border: 5px solid #f4df61;
   width: calc(75% + 5vw);
   height: 20vw;
@@ -197,7 +199,7 @@ overflow: hidden;
   /*height: calc(140px + 10vw);*/
   margin-left: 50px;
 }
-.second-carousel {
+#second-carousel {
   border: 5px solid #51baac;
   width: calc(75% + 5vw);
   height: 20vw;

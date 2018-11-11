@@ -19,8 +19,9 @@
     to {transform: translateX(0);}
   }
   .slide-right {
+    display: inline-block;
     animation-name: slidetoleft;
-    animation-duration: 0.7s;
+    animation-duration: 0.8s;
     animation-timing-function: ease-out;
   }
   @keyframes slidetoright {
@@ -28,14 +29,22 @@
     to {transform: translateX(0);}
   }
   .slide-left {
+    display: inline-block;
     animation-name: slidetoright;
-    animation-duration: 0.7s;
+    animation-duration: 0.8s;
     animation-timing-function: ease-out;
   }
-  .none {
-    display: none;
+  .disappearleft {
+    transform: translateX(-150%);
+    transition: 0.8s;
   }
-
+  .disappearright {
+    transform: translateX(150%);
+    transition: 0.8s;
+  }
+.none {
+  display: none;
+}
   </style>
 </head>
 
@@ -89,14 +98,14 @@ used on materials including packaging, brochures,
 and websites...</p>
 </div>
   <div id="carousel-container">
-    <div class="first-carousel">
+    <div id="first-carousel">
       <div><img src="carousel/img1.jpg"></div>
       <div><img src="carousel/img2.jpg"></div>
       <div><img src="carousel/img3.jpg"></div>
     </div>
     <img src="assets/arrow-up.png" style="width: 8%;" id="up">
     <img src="assets/arrow-down.png" style="width: 7%;" id="down">
-    <div class="second-carousel">
+    <div id="second-carousel">
       <div><img src="carousel/img2.jpg"></div>
       <div><img src="carousel/img3.jpg"></div>
       <div><img src="carousel/img1.jpg"></div>
@@ -115,7 +124,7 @@ and websites...</p>
   <script type="text/javascript" src="slick/slick.min.js"></script>
    <script src="js/jquery.scrollify.js"></script>
    <script src="js/jquery.hypher.js"></script>
-<script src="js/en-us.js"></script>
+   <script src="js/en-us.js"></script>
   <script>
     $(document).ready(function() {
       $("#contact").click(function(e) {
@@ -130,20 +139,24 @@ and websites...</p>
           if(i === 1) {
           $("#intro-container").addClass("slide-left");
            $("#carousel-container").addClass("slide-right");
-           $(".first-carousel").slick('slickPlay');
-           $(".second-carousel").slick('slickPlay');
+           $("#first-carousel").slick('slickPlay');
+           $("#second-carousel").slick('slickPlay');
+           $("#intro-container").removeClass("disappearleft");
+           $("#carousel-container").removeClass("disappearright");
           }
           if(i !== 1){
             $("#intro-container").removeClass("slide-left");
             $("#carousel-container").removeClass("slide-right");
-            $(".first-carousel").slick('slickPause');
-            $(".second-carousel").slick('slickPause');
+            $("#first-carousel").slick('slickPause');
+            $("#second-carousel").slick('slickPause');
+            $("#intro-container").addClass("disappearleft");
+            $("#carousel-container").addClass("disappearright");
           }
         }
       });
       });
 
-      $(".first-carousel").slick({
+      $("#first-carousel").slick({
         dots: false,
         arrows: false,
         infinite: true,
@@ -154,14 +167,14 @@ and websites...</p>
         autoplaySpeed: 5000,
       });
 
-      $(".second-carousel").slick({
+      $("#second-carousel").slick({
       dots: false,
       arrows: true,
       infinite: true,
       vertical: true,
       speed: 300,
       slidesToShow: 1,
-      asNavFor: ".first-carousel",
+      asNavFor: "#first-carousel",
       nextArrow: $("#up"),
       prevArrow: $("#down"),
       autoplay: true,
@@ -196,17 +209,19 @@ $('article p').hyphenate('en-us');
     $("div#social-media").hide("blind", 400);
     }
     });
-  // window.onload = function(){
-  //  window.setTimeout(function(){
-  //   document.getElementById('carousel-container').style.display = 'inline-block';
-  //    document.getElementById('intro-container').style.display = 'inline-block';
-  //    document.getElementById('white-logo').style.display = 'inline-block';
-    //  document.getElementById('main-img').style.display = 'inline-block';
-//  }, 1000);
-//  window.setTimeout(function(){
-  //    document.getElementById('carousel-container').style.display = 'inline-block';
+window.onload = function(){
+   //window.setTimeout(function(){
+   //$("#intro-container").addClass("slide-left");
+    //$("#carousel-container").addClass("slide-right");
+   document.getElementById('carousel-container').style.display = 'inline-block';
+  document.getElementById('intro-container').style.display = 'inline-block';
+   //document.getElementById('white-logo').style.display = 'inline-block';
+   //document.getElementById('main-img').style.display = 'inline-block';
 //  }, 500);
-  //};
+//  window.setTimeout(function(){
+  //   document.getElementById('carousel-container').style.display = 'inline-block';
+  //}, 200);
+ };
 
 
   </script>
