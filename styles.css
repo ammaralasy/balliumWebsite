@@ -47,16 +47,17 @@ nav {
   width: 70%;
   justify-content: flex-start;
   align-items: flex-end;
-
+  margin-left: 5%;
+  position: relative;
+  bottom: -20px;
 }
 nav > a:first-of-type {
 margin-left: 0;
 }
 .navigation {
-  margin-left: 60px;
+  margin-left: 80px;
   margin-bottom: 20px;
-  margin-top: 10%;
-  font-size: 1.2em;
+  font-size: 1.3em;
   cursor: pointer;
   position: relative;
   z-index: 5;
@@ -86,7 +87,7 @@ position: absolute;
   padding: 105px 30px;
   border: 2px solid  #51baac;
   top: -15px;
-  left: 65px;
+  left: 88px;
 }
 #social-media img {
   width: 25px;
