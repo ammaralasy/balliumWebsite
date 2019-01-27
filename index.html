@@ -14,6 +14,104 @@
   <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <style>
+  @media screen and (max-width: 1350px) and (min-width: 1250px) {
+    #more ,  #extra-parag1 {
+      display: none;
+    }
+    #more1 {
+      display: inline;
+    }
+  }
+  @media screen and (max-width: 1250px) and (min-width: 1100px) {
+    #more , #more1 , #extra-parag2 , #extra-parag1 {
+      display: none;
+    }
+    #more2 {
+      display: inline;
+    }
+  }
+  @media screen and (max-width: 1100px) and (min-width: 1000px) {
+    #more , #more1 , #more2 , #extra-parag3 , #extra-parag2 , #extra-parag1 {
+      display: none;
+    }
+    #more3 {
+      display: inline;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+  /*  #intro-container , #carousel-container {
+      display: block;
+    }*/
+    #page2 {
+      top: 0;
+    }
+    #intro-container {
+      background-color: #51baac;
+      top: 5px;
+      padding-bottom: 60px;
+      height: auto;
+      /*padding-bottom: 30vh;*/
+    }
+
+  #intro-container #less , #page2 p , #page2  b, #page2 h1 , #page2 h1 span , #more4 , #more4 > b, #page2 #extra-parag, #page2 #extra-parag3, #page2 #extra-parag1, #page2 #extra-parag2, #page2 #extra-parag4{
+      color: white;
+      width: 70%;
+      margin: auto;
+    }
+    #page2 h1 , #page2 h1 span {
+      padding-top: 60px;
+      padding-bottom: auto;
+
+    }
+    #more , #more1 , #more2 , #more3 , #extra-parag3 , #extra-parag2 , #extra-parag1 , #extra-parag4 {
+      display: none;
+    }
+    #more4 {
+      display: inline;
+    }
+    body > #page2 {
+      flex-flow: column;
+      overflow: visible;
+    }
+    body > #page2 > #intro-container {
+      width: 100%;
+      margin: 0 auto;
+   }
+   body > #page2 > #carousel-container {
+     width: 80%;
+     margin: 0 auto;
+     z-index: 10;
+    /* height: 50vw;*/
+   }
+   #first-carousel {
+     display: none;
+   }
+#second-carousel {
+  width: 100%;
+  height: 51vw;
+  margin: 20px 0 auto;
+  top: -30px;
+  position: relative;
+  z-index: 10;
+}
+#second-carousel img {
+width: 99%;
+height: 48.5vw;
+margin: auto;
+}
+#up {
+  position: relative;
+  transform: rotate(-90deg);
+  top: 25vw;
+  right: 6vw;
+}
+#down {
+  transform: rotate(-90deg);
+  right: -5.5vw;
+  bottom: 43.5%;
+}
+  }
+  @media screen and (min-width: 1000px) {
   @keyframes slidetoleft {
     from {transform: translateX(150%);}
     to {transform: translateX(0);}
@@ -42,18 +140,34 @@
     transform: translateX(150%);
     transition: 0.5s;
   }
+}
+
   </style>
 </head>
 
 <body>
+
   <div id="page1" class="snap">
     <header class="header-container">
       <div class="logo-container">
         <img src="assets/balliumlogo.svg" alt="Ballium">
       </div>
       <nav>
+        <div class="bars">
+        <div id="bar-res1" class="ham-bars"></div>
+        <div id="bar-res2" class="ham-bars"></div>
+        <div id="bar-res3" class="ham-bars"></div>
+        <div class="outer-border2">
+      <ul id="responsive-menu">
+        <li> <a class="responsive" href="#">works</a> </li>
+        <li><a class="responsive" href="#page2" class="us">us</a></li>
+        <li><a class="responsive" href="#">news</a></li>
+        <li><a class="responsive" href="#" id="contact-res">contact</a></li>
+      </ul>
+</div>
+</div>
         <a class="navigation" href="#">works</a>
-        <a class="navigation" href="#page2" id="us">us</a>
+        <a class="navigation us" href="#page2">us</a>
         <a class="navigation" href="#">news</a>
         <div class="sub-menu">
           <a class="navigation" href="#" id="contact">contact</a>
@@ -71,9 +185,11 @@
 
     <div class="main-bg">
       <p>we fly to sky..</p>
-      <object type="image/svg+xml" data="assets/main-bg.svg" class="background1">Your borowser Does not support SVG</object>
+      <object type="image/svg+xml" data="assets/main-bg.svg" class="background1">Your browser Does not support SVG</object>
       <object type="image/svg+xml" data="assets/main-elements.svg" class="background2">Your borowser Does not support SVG</object>
-      <object type="image/svg+xml" data="assets/sun.svg" class="background3">Your borowser Does not support SVG</object>
+      <object type="image/svg+xml" data="assets/sun.svg" class="background3">Your browser Does not support SVG</object>
+      <object type="image/svg+xml" data="assets/sm-main-elements.svg" class="sm-cover">Your browser Does not support SVG</object>
+      <object type="image/svg+xml" data="assets/sm-sun.svg" class="sm-cover">Your browser Does not support SVG</object>
     </div>
 
   </div>
@@ -81,18 +197,12 @@
   <article id="page2" class="snap">
     <div id="intro-container">
     <h1><span>what</span> is <span>ballium</span>?</h1>
-    <p>A good company utilizes pictures and text to help
-capture the attention of its audience. Graphic
-design is a combination of visual images and text to
-communicate to an audience. ... Graphic design is
-used on materials including packaging, brochures,
-and websites...</p>
-<p>A good company utilizes pictures and text to help
-capture the attention of its audience. Graphic
-design is a combination of visual images and text to
-communicate to an audience. ... Graphic design is
-used on materials including packaging, brochures,
-and websites...</p>
+<p><b>A lot ask about the meaning of ballium?</b><br>
+It's a helium balloon that fly to sky with success.The success comes with much determination that we made for you.
+The good design is the perfect way to attract many people to your work.</p>
+<p>Here the story of Ballium begins.<span id="more4">..<b>more</b></span></p>
+<p><span id="extra-parag4">One special day I started thinking of achieving one of my dreams 12/12 I never thought</span><span id="more3">...<b>more</b></span><span id="extra-parag3">I could do it just because of my bold of dreaming that way. Despite the war, my dream was like a hard</span><span id="more2">...<b>more</b></span><span id="extra-parag2"> adventure in a really difficult time we were forced to prove ourselves with determination.</span><span id="more1">..<b>more</b>
+</span><span id="extra-parag1">It was my wish that pushing me to the first step into the road of striving,but determination is the thing kept me on the right path till the end</span> <span id="more">...<b>more</b></span><span id="extra-parag">and this is what I did until it changed to Balloon.Always and repeatedly heard that war destroy dreams and homes ,but it was an inspiration to be strong and better. My career with a design for one of my buddies then  lots of orders comes. The balloon kept nourishing till it turns into Ballium. This name started spread among people. As a balloon it raised to the sky to see the light to get merged. It never keep up till light comes ,but it enlights everything around her to  spread joy and happiness.</span><span id="less">..<b>less</b></span></p>
 </div>
   <div id="carousel-container">
     <div id="first-carousel">
@@ -101,17 +211,18 @@ and websites...</p>
       <div><img src="carousel/img3.jpg"></div>
     </div>
     <img src="assets/arrow-up.png" style="width: 8%;" id="up">
-    <img src="assets/arrow-down.png" style="width: 7%;" id="down">
-    <div id="second-carousel">
+    <div id="second-carousel" dir="rtl">
       <div><img src="carousel/img2.jpg"></div>
       <div><img src="carousel/img3.jpg"></div>
       <div><img src="carousel/img1.jpg"></div>
     </div>
+    <img src="assets/arrow-down.png" style="width: 7%;" id="down">
    </div>
   </article>
 <footer id="page3" class="snap">
   <img id="white-logo" src="assets/white-logo.png">
-  <img id="main-img" src="assets/footer3.png">
+  <img id="main-footer" src="assets/footer3.png">
+  <img id="sm-footer" src="assets/sm-footer.svg">
 
 </footer>
 
@@ -129,6 +240,98 @@ and websites...</p>
       $("div#social-media").toggle("blind", 400);
       });
 
+$(".ham-bars").click(function(e) {
+$(".outer-border2").toggle("blind", 400);
+$("#responsive-menu").toggle("blind", 400);
+});
+
+      $("#more").click(function(){
+        $("#more").hide();
+        $("#extra-parag").show();
+        $("#less").show();
+       $.scrollify.update();
+       $("#less").click(function(){
+         $("#less").hide();
+         $("#extra-parag").hide();
+        $("#more").show();
+          $.scrollify.update();
+       });
+      });
+
+     $("#more1").click(function(){
+       $("#more1").hide();
+       $("#extra-parag").show();
+       $("#extra-parag1").show();
+       $("#less").show();
+      $.scrollify.update();
+      $("#less").click(function(){
+        $("#less").hide();
+        $("#extra-parag").hide();
+        $("#extra-parag1").hide();
+       $("#more1").show();
+         $.scrollify.update();
+      });
+     });
+     $("#more2").click(function(){
+       $("#more2").hide();
+       $("#extra-parag").show();
+       $("#extra-parag1").show();
+       $("#extra-parag2").show();
+       $("#less").show();
+      $.scrollify.update();
+      $("#less").click(function(){
+        $("#less").hide();
+        $("#extra-parag").hide();
+        $("#extra-parag1").hide();
+          $("#extra-parag2").hide();
+       $("#more2").show();
+         $.scrollify.update();
+      });
+     });
+     $("#more3").click(function(){
+       $("#more3").hide();
+       $("#extra-parag").show();
+       $("#extra-parag1").show();
+       $("#extra-parag2").show();
+        $("#extra-parag3").show();
+       $("#less").show();
+      $.scrollify.update();
+      $("#less").click(function(){
+        $("#less").hide();
+        $("#extra-parag").hide();
+        $("#extra-parag1").hide();
+        $("#extra-parag2").hide();
+        $("#extra-parag3").hide();
+       $("#more3").show();
+         $.scrollify.update();
+      });
+     });
+     $("#more4").click(function(){
+       $("#more4").hide();
+       $("#intro-container").css("height","50vh");
+       //$("#intro-container").removeClass("varaible-height");
+       //$("#intro-container").addClass("fixed-height");
+       $("#extra-parag").show();
+       $("#extra-parag1").show();
+       $("#extra-parag2").show();
+      $("#extra-parag3").show();
+      $("#extra-parag4").show();
+       $("#less").show();
+      $.scrollify.update();
+      $("#less").click(function(){
+        $("#less").hide();
+        $("#intro-container").css("height","auto");
+        //$("#intro-container").removeClass("fixed-height");
+        //$("#intro-container").addClass("varaible-height");
+        $("#extra-parag").hide();
+        $("#extra-parag1").hide();
+        $("#extra-parag2").hide();
+        $("#extra-parag3").hide();
+        $("#extra-parag4").hide();
+       $("#more4").show();
+         $.scrollify.update();
+      });
+     });
       $(function() {
       $.scrollify({
         section : ".snap",
@@ -140,6 +343,7 @@ and websites...</p>
            $("#second-carousel").slick('slickPlay');
            $("#intro-container").removeClass("disappearleft");
            $("#carousel-container").removeClass("disappearright");
+           $.scrollify.update();
           }
           if(i !== 1){
             $("#intro-container").removeClass("slide-left");
@@ -148,6 +352,7 @@ and websites...</p>
             $("#second-carousel").slick('slickPause');
             $("#intro-container").addClass("disappearleft");
             $("#carousel-container").addClass("disappearright");
+            $.scrollify.update();
           }
         }
       });
@@ -162,6 +367,7 @@ and websites...</p>
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 5000,
+
       });
 
       $("#second-carousel").slick({
@@ -176,9 +382,26 @@ and websites...</p>
       prevArrow: $("#down"),
       autoplay: true,
       autoplaySpeed: 4700,
+      responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        vertical: false,
+        rtl: true,
+        arrows: true,
+        speed: 300,
+        slidesToShow: 1,
+        asNavFor: "#first-carousel",
+        nextArrow: $("#down"),
+        prevArrow: $("#up"),
+        autoplay: true,
+        autoplaySpeed: 4700,
+      }
+    }
+  ]
       });
 
-      $("#us").on('click', function(event) {
+      $(".us").on('click', function(event) {
   // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -186,17 +409,18 @@ and websites...</p>
       // Store hash
       var hash = this.hash;
       // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      // The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 1000, function(){
         // Add hash (#) to URL when done scrolling (default click behavior)
+
         window.location.hash = hash;
       });
     } // End if
   });
 
-
+//this line will make introduction paragraph justified
 $('article p').hyphenate('en-us');
 });
 
@@ -206,6 +430,24 @@ $('article p').hyphenate('en-us');
     $("div#social-media").hide("blind", 400);
     }
     });
+
+    $(document).on("click",function(event){
+        if(!$(".ham-bars").is(event.target) && $(".outer-border2").has(event.target).length === 0){
+      $(".outer-border2").hide("blind", 400);
+      $("ul#responsive-menu").hide("blind", 400);
+      }
+      });
+
+    // this snippet will make browser reload when resized
+    $(window).bind('resize', function(e)
+{
+  if (window.RT) clearTimeout(window.RT);
+  window.RT = setTimeout(function()
+  {
+    this.location.reload(false); /* false to get page from cache */
+  }, 200);
+});
+
 window.onload = function(){
    //window.setTimeout(function(){
    //$("#intro-container").addClass("slide-left");
